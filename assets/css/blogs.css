@@ -1,0 +1,32 @@
+.content{
+    width: 90%;
+    margin: 30px auto 10px;
+
+}
+
+.content > .main-content{
+    width: 70%;
+    float: left;
+
+}
+
+.content .sidebar{
+    width: 30%;
+    float: left;
+    height: 300px;
+}
+
+.clearfix ::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.post{
+    width: 100%;
+    height: auto;
+}
+
+ul li{
+    list-style: none;
+}
