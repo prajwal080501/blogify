@@ -59,6 +59,10 @@ $posts = getPublishedPosts();
             text-decoration: none;
             color: #000;
         }
+        .zoom{
+            transition: 0.5s ease;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 
@@ -66,7 +70,7 @@ $posts = getPublishedPosts();
     <?php include(ROOT_PATH . './app/includes/header.php'); ?>
     <?php include('./app/includes/messages.php'); ?>
 
-    <div class="bg-dark text-secondary px-4 py-5 text-center rounded-bottom" style="background: url('./assets/images/bg.jpg'); background-position:center; object-fit:contain; background-attachment:fixed; background-size:cover; background-repeat:no-repeat;  box-shadow:inset 0 0 0 2000px rgba(145, 145, 145, 0.2);">
+    <div class=" hero bg-dark text-secondary px-4 py-5 text-center rounded-bottom" style="background: url('./assets/images/bg.jpg'); background-position:center; object-fit:contain; background-attachment:fixed; background-size:cover; background-repeat:no-repeat;  box-shadow:inset 0 0 0 2000px rgba(145, 145, 145, 0.2);">
         <div class="py-5">
 
             <h3 class="display-6 fw-bold text-white">Blogify a Blog Website For Computer Geeks.</h3>
@@ -82,7 +86,7 @@ $posts = getPublishedPosts();
     <h1 class="title" style="text-align: center; padding-top: 10px;margin-top: 10px;">
         Recent Posts
     </h1>
-    <div class="feature-box d-flex justify-content-evenly rounded-top ">
+    <div class="feature-box d-flex justify-content-evenly rounded-top shadow">
 
         <!-- display onlty 3 records from the database -->
         <?php $i = 3; ?>
@@ -108,7 +112,17 @@ $posts = getPublishedPosts();
 
     </div>
     <?php include(ROOT_PATH . '/app/includes/footer.php'); ?>
-
+    <script>
+        // Add zoom effect to div with class .hero on scroll
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 50) {
+                $(".hero").addClass("zoom");
+            } else {
+                $(".hero").removeClass("zoom");
+            }
+        });
+    </script>
 </body>
 
 </html>

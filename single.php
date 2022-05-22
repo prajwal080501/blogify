@@ -5,6 +5,8 @@ if (isset($_GET['id'])) {
     $post = selectOne('posts', ['id' => $_GET['id']]);
     $recentPosts = selectAll('posts', ['published' => 1], 'DESC', '2');
 }
+include(ROOT_PATH . './app/helpers/middleware.php');
+usersOnly();
 ?>
 
 <!DOCTYPE html>

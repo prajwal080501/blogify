@@ -1,5 +1,7 @@
 <?php include('../path.php');
 include(ROOT_PATH . '/app/database/db.php');
+adminOnly();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

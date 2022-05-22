@@ -1,5 +1,7 @@
 <?php include('../../path.php');
 include(ROOT_PATH . '/app/controllers/posts.php');
+include(ROOT_PATH . './app/helpers/middleware.php');
+adminOnly();
 ?>
 
 <!DOCTYPE html>
