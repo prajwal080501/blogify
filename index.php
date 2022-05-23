@@ -70,12 +70,12 @@ $posts = getPublishedPosts();
     <?php include(ROOT_PATH . './app/includes/header.php'); ?>
     <?php include('./app/includes/messages.php'); ?>
 
-    <div class=" hero bg-dark text-secondary px-4 py-5 text-center rounded-bottom" style="background: url('./assets/images/bg.jpg'); background-position:center; object-fit:contain; background-attachment:fixed; background-size:cover; background-repeat:no-repeat;  box-shadow:inset 0 0 0 2000px rgba(145, 145, 145, 0.2);">
+    <div class=" hero bg-dark text-secondary px-4 py-5 text-center rounded-bottom shadow-lg" style="background: url('./assets/images/bg.jpg'); background-position:center; object-fit:contain; background-attachment:fixed; background-size:cover; background-repeat:no-repeat;  box-shadow:inset 0 0 0 2000px rgba(145, 145, 145, 0.2);">
         <div class="py-5">
 
             <h3 class="display-6 fw-bold text-white">Blogify a Blog Website For Computer Geeks.</h3>
             <div class="col-lg-6 mx-auto">
-                <p class="fs-5 mb-4 text-secondary">Learn Data Structures and Algorithms Online at Your Own Pace with Blogify.</p>
+                <p class="fs-5 mb-4 text-white " style="opacity:0.5;">Learn Data Structures and Algorithms Online at Your Own Pace with Blogify.</p>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                     <a href="<?php echo BASE_URL . '/blogs.php' ?>" type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold shadow">View Blogs</a>
                     <a class="btn btn-outline-light btn-lg px-4 shadow" href="<?php echo BASE_URL . "./contact.php" ?>">Contact</a>
