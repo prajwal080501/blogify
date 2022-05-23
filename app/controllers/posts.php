@@ -2,6 +2,7 @@
 include(ROOT_PATH . '/app/database/db.php');
 include(ROOT_PATH . '/app/helpers/validatePost.php');
 
+
 $table = 'posts';
 $id = '';
 $topics = selectAll('topics');

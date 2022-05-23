@@ -17,6 +17,7 @@ $posts = getPublishedPosts();
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="./home.css">
     <script src="./assets/js/scripts.js"></script>
+    <link rel="stylesheet" href="./output.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -70,7 +71,7 @@ $posts = getPublishedPosts();
     <?php include(ROOT_PATH . './app/includes/header.php'); ?>
     <?php include('./app/includes/messages.php'); ?>
 
-    <div class=" hero bg-dark text-secondary px-4 py-5 text-center rounded-bottom shadow-lg" style="background: url('./assets/images/bg.jpg'); background-position:center; object-fit:contain; background-attachment:fixed; background-size:cover; background-repeat:no-repeat;  box-shadow:inset 0 0 0 2000px rgba(145, 145, 145, 0.2);">
+    <div class=" hero bg-dark text-secondary px-4 py-5 text-center rounded-bottom -lg" style="background: url('./assets/images/bg.jpg'); background-position:center; object-fit:contain; background-attachment:fixed; background-size:cover; background-repeat:no-repeat;  box-shadow:inset 0 0 0 2000px rgba(145, 145, 145, 0.2);">
         <div class="py-5">
 
             <h3 class="display-6 fw-bold text-white">Blogify a Blog Website For Computer Geeks.</h3>
@@ -86,13 +87,13 @@ $posts = getPublishedPosts();
     <h1 class="title" style="text-align: center; padding-top: 10px;margin-top: 10px;">
         Recent Posts
     </h1>
-    <div class="feature-box d-flex justify-content-evenly rounded-top shadow">
+    <div class="feature-box d-flex justify-content-evenly rounded-top ">
 
         <!-- display onlty 3 records from the database -->
         <?php $i = 3; ?>
         <?php foreach ($posts as $post) : ?>
             <?php if ($i > 0) : ?>
-                <div class="card mt-3 shadow rounded" style="width:28rem">
+                <div class="card mt-2 mb-3 h-fit-content shadow rounded bg-slate-900" style="width:28rem">
                     <img src="<?php echo BASE_URL . '/assets/images/' . $post['image']; ?>" class="card-img-top" alt="...">
                     <div class="card-body">
                         <a class="title" href="./single.php?id=<?php echo $post['id'] ?>"><h5 class="card-title"><?php echo $post['title']; ?></h5></a>

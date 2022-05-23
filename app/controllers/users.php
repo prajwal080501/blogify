@@ -3,6 +3,7 @@
 include(ROOT_PATH . '/app/database/db.php');
 include(ROOT_PATH . '/app/helpers/validation.php');
 
+
 $table = 'users';
 $adminUsers = selectAll($table);
 $errors = array();
