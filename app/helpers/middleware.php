@@ -3,8 +3,8 @@
 
 function usersOnly($redirect = "/index.php"){
     if(empty($_SESSION['id'])){
-        $_SESSION['error'] = "You must be logged in to view this page";
-        $_SESSION['error_type'] = "error";
+        $_SESSION['message'] = "You must be logged in to view this page";
+        $_SESSION['type'] = "danger";
         header("Location:" . BASE_URL . $redirect);
         exit(0);
     }
@@ -13,8 +13,8 @@ function usersOnly($redirect = "/index.php"){
 
 function adminOnly($redirect = "/index.php"){
     if(empty($_SESSION['id'] || $_SESSION['admin'])){
-        $_SESSION['error'] = "You must be logged in to view this page";
-        $_SESSION['type'] = "error";
+        $_SESSION['message'] = "You must be logged in to view this page";
+        $_SESSION['type'] = "danger";
         header("Location:" . BASE_URL . $redirect);
         exit(0);
     }

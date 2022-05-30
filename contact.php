@@ -1,6 +1,8 @@
 <?php include('path.php');
 include(ROOT_PATH . '/app/controllers/users.php');
 
+
+
 ?>
 
 
@@ -65,8 +67,10 @@ include(ROOT_PATH . '/app/controllers/users.php');
     <link href="signin.css" rel="stylesheet">
 </head>
 
-<body class="text-center">
-
+<body class="text-center d-flex flex-column">
+    <div class="w-100 mt-n4 sticky-top" style="margin-top: -40px;">
+    <?php include(ROOT_PATH . '/app/includes/header.php'); ?>
+    </div>
     <main class="form-signin">
 
         <h1 class="mt-5 mb-3 text-muted fw-bold p-2">Blogify</h1>

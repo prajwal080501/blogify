@@ -4,6 +4,7 @@ include(ROOT_PATH . '/app/database/db.php');
 include(ROOT_PATH . '/app/helpers/validation.php');
 
 
+
 $table = 'users';
 $adminUsers = selectAll($table);
 $errors = array();
@@ -63,7 +64,7 @@ if (isset($_POST['register-btn']) || isset($_POST['create-admin'])) {
 }
 
 if (isset($_POST['update-user'])) {
-  adminOnly();
+  // adminOnly();
   $errors = validateUser($_POST);
 
   if (count($errors) === 0) {
@@ -111,7 +112,7 @@ if (isset($_POST['login-btn'])) {
 }
 
 if (isset($_GET['delete_id'])) {
-  adminOnly();
+  // adminOnly();
   $count = delete($table, $_GET['delete_id']);
   $_SESSION['message'] = 'User deleted successfully';
   $_SESSION['type'] = 'success';

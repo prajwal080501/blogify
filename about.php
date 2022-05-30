@@ -19,6 +19,7 @@ $posts = getPublishedPosts();
   <script src="./assets/js/scripts.js"></script>
   <link href=”./output.css” rel=”stylesheet”>
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="./style.css">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -178,7 +179,7 @@ $posts = getPublishedPosts();
             </small>
             <p class="card-text">Varandeep is a student at the University of Pune. He is a software developer and a web developer. He is a very passionate about web development and is always looking to learn new things.</p>
             <!-- github button -->
-            <a href="" class="btn btn-primary  rounded">
+            <a href="" class="btn btn-primary  rounded hover:bg-red-500">
               <i class="fab fa-github"></i>
               Visit Github
             </a>

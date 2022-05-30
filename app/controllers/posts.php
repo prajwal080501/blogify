@@ -34,7 +34,7 @@ if (isset($_GET['delete_id'])) {
 }
 
 if(isset($_GET['published'] ) && isset($_GET['p_id'])){
-   adminOnly();
+   // adminOnly();
     $published = $_GET['published'];
     $p_id = $_GET['p_id'];
       $count = update($table, $p_id, ['published' => $published]);
@@ -46,7 +46,7 @@ if(isset($_GET['published'] ) && isset($_GET['p_id'])){
  
 }
 if (isset($_POST['add-post'])) {
-   adminOnly();
+   // adminOnly();
    // dd(_FILES$['image']['name']);
    $errors = validatePost($_POST);
    if (!empty($_FILES['image']['name'])) {
@@ -81,7 +81,7 @@ if (isset($_POST['add-post'])) {
 }
 
 if (isset($_POST['update-post'])) {
-   adminOnly();
+   // adminOnly();
    $errors = validatePost($_POST);
    if (!empty($_FILES['image']['name'])) {
       $image_name = time() . '_' . $_FILES['image']['name'];

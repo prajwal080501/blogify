@@ -1,5 +1,7 @@
 <?php include('./path.php');
 include(ROOT_PATH . '/app/database/db.php');
+include(ROOT_PATH . './app/helpers/middleware.php');
+
 
 $posts = getPublishedPosts();
 
@@ -17,7 +19,7 @@ $posts = getPublishedPosts();
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="./home.css">
     <script src="./assets/js/scripts.js"></script>
-    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -42,7 +44,7 @@ $posts = getPublishedPosts();
             text-align: center;
         }
 
-        .error {
+        .msg-error {
             color: red;
             font-size: 12px;
             background-color: #f7e6e6;
@@ -53,6 +55,18 @@ $posts = getPublishedPosts();
             text-align: center;
             margin: 0 auto;
             box-shadow: 0 0 5px #f7e6e6;
+        }
+        .msg-success{
+            color: green;
+            font-size: 12px;
+            background-color: #e6f7e6;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #e6f7e6;
+            margin-bottom: 5px;
+            text-align: center;
+            margin: 0 auto;
+            box-shadow: 0 0 5px #e6f7e6;
         }
         .title{
             font-size: 1.5rem;
@@ -99,7 +113,7 @@ $posts = getPublishedPosts();
                         <a class="title" href="./single.php?id=<?php echo $post['id'] ?>"><h5 class="card-title"><?php echo $post['title']; ?></h5></a>
                         <!-- Display first 3 lines of post -->
                         <p class="card-text"><?php echo html_entity_decode(substr(strip_tags($post['body']), 0, 150)) . '...'; ?></p>
-                        <a href="./single.php?id=<?php echo $post['id'] ?>" class="btn btn-primary">Read More</a>
+                        <a href="./single.php?id=<?php echo $post['id'] ?>" class="btn btn-primary hover:bg-red-600">Read More</a>
                         <!-- display date and time -->
                         <p class="card-text mt-3"><small class="text-muted">Last updated <b><?php echo $post['created_at']; ?></b> </small></p>
                         <!-- author name -->

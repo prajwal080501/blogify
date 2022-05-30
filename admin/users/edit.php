@@ -2,7 +2,7 @@
 <?php include(ROOT_PATH . '/app/controllers/users.php'); 
 include(ROOT_PATH . './app/helpers/middleware.php');
 
-adminOnly();
+// adminOnly();
  ?>
 
 <!DOCTYPE html>

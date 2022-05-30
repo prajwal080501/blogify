@@ -1,11 +1,8 @@
 {
-  "devDependencies": {
-    "tailwindcss": "^3.0.24"
-  },
   "name": "blogify",
   "description": "**Blogify** A Blog Website for Computer Geeks, Professionals, Tech Enthusiasts.",
   "version": "1.0.0",
-  "main": "tailwind.config.js",
+  "main": "index.php",
   "dependencies": {
     "acorn": "^7.4.1",
     "acorn-node": "^1.8.2",
@@ -66,14 +63,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/prajwal080501/blogify.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/prajwal080501/blogify.git",
+  "author": "Prajwal Ladkat <62328357+prajwal080501@users.noreply.github.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/prajwal080501/blogify/issues"
   },
-  "homepage": "https://github.com/prajwal080501/blogify#readme"
+  "homepage": "https://github.com/prajwal080501/blogify#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.24"
+  }
 }

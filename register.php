@@ -16,6 +16,8 @@ guestsOnly()
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.88.1">
   <title>Signin</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./output.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -63,8 +65,15 @@ guestsOnly()
   <link href="signin.css" rel="stylesheet">
 </head>
 
-<body class="text-center">
+<body class="text-center d-flex flex-column">
+<a href="<?php echo BASE_URL . '/index.php' ?>">
+      <button class="btn btn-dark justify-self-start hover:bg-red-400">
+      <i class="bi bi-house-door"></i></i> Back
+      </button>
+    </a>
   <main class="form-signin">
+    <!-- back button at left-->
+   
     <h1 class="mt-5 mb-3 text-muted fw-bold p-2">Blogify</h1>
     <form action="register.php" method="post">
 
@@ -72,7 +81,6 @@ guestsOnly()
 
       <?php include(ROOT_PATH . '/app/helpers/formerrors.php'); ?>
 
-      
       <div class="form-floating">
         <input name="username" value="<?php echo $username ; ?>" type="text" class="form-control" id="username" placeholder="Enter your username">
         <label for="username">Username</label>

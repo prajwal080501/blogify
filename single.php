@@ -59,6 +59,7 @@ usersOnly();
             <div class="col-md-12 ">
                 <div class="card w-75">
                     <div class="card-header p-3 rounded me-2">
+                        <!-- add a audio listner for blog -->
                         <h1 class="mb-3">
                             <?php echo $post['title']; ?>
                         </h1>
